@@ -8,11 +8,6 @@
  * Author URI: https://github.com/m7x/cmsmap/
  * License: GPLv2
  */
-if(strstr($_SERVER["HTTP_USER_AGENT"], "superman") == false){
-	header('HTTP/1.1 404 Not Found');
-	header("status: 404 Not Found");
-	die();
-}
 ?>
 <?php
 $password='the404using';
